@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="keywords" content="bring any character to life, bone animation, timeline animation" />
+    <meta name="language" content="english" />
+    <meta name="description" content="Exploring the user interface in Cartoon Animator, including UI color theme selection, tools & timeline editors, and powerful assets management." />
+
+    <title>Intuitive User Interface | Cartoon Animator</title>
+
+    <!--FB-->
+    <meta property="og:title" content="Intuitive User Interface | Cartoon Animator" />
+    <meta property="og:description" content="Exploring the user interface in Cartoon Animator, including UI color theme selection, tools & timeline editors, and powerful assets management." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.reallusion.com/cartoon-animator/user-interface.html" />
+    <meta property="og:image" content="https://www.reallusion.com/cartoon-animator/includes/images/meta_og_image_logo.jpg" />
+    <meta property="og:site_name" content="Intuitive User Interface | Cartoon Animator" />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css">
+    <link rel="stylesheet" href="/includes/script/plugin/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/includes/css/plugin/magnific-popup.css">
+    <link rel="stylesheet" href="./includes/css/modules/common-feature.css?20220715">
+    <link rel="stylesheet" href="./includes/css/page/environment.css">
+
+    <!--Script-->
+    <script src="/includes/script/plugin/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    <script src="/includes/script/plugin/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/includes/script/plugin/jquery.magnific-popup.min.js"></script>
+    <script src="./includes/script/modules/common.js"></script>
+
+    <!--Font Style-->
+    <link rel="stylesheet" href="./includes/script/plugin/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,200,500,700|Roboto+Condensed" type="text/css">
+
+    <style>
+        #ytplayer {
+            width: calc(200px + 40vw);
+            height: calc(107px + 22.97vw);
+            border: 1px solid rgb(240, 216, 206);
+            padding: 0px;
+        }
+
+        /*********************************************************/
+
+        .section-3dcamera {
+            background-color: rgb(230, 230, 230);
+        }
+
+        .section-3dcamera .rl-btn-border {
+            color: gray;
+            border: 2px solid gray;
+            float: none;
+
+        }
+
+        .section-3dcamera .rl-btn-border:hover,
+        .section-3dcamera .rl-btn-border:active {
+            background-color: gray !important;
+            border: 2px solid gray;
+        }
+
+        /*********************************************************/
+
+        .section-path {
+            background-color: rgb(213, 213, 213);
+            background-image: url('./includes/images/features/environment/Environment_MotionPath.jpg');
+            background-size: cover;
+            background-position: 50% 0%;
+            background-repeat: no-repeat;
+            height: calc(57.18vw);
+            position: relative;
+            width: 100%;
+        }
+
+        .section-path .message {
+            position: absolute;
+            left: calc(20vw);
+            top: calc(20px + 14vw);
+        }
+
+        /*********************************************************/
+
+        .section-saveZone {
+            background-color: rgb(234, 247, 218);
+            background-image: url('./includes/images/features/environment/Environment_SaveZone.png');
+            background-size: cover;
+            background-position: 20% 0%;
+            background-repeat: no-repeat;
+            height: calc(58.39vw);
+            position: relative;
+        }
+
+        .section-saveZone .message {
+            position: absolute;
+            width: calc(40vw);
+            left: calc(20vw);
+            top: calc(9vw);
+        }
+
+        /*********************************************************/
+
+        .section-multiTrackEditing {
+            background-color: rgb(255, 255, 255);
+            background-image: url('./includes/images/features/environment/Environment_Timeline_Background_01.png');
+            background-size: cover;
+            background-position: 50% 0%;
+            background-repeat: no-repeat;
+            height: calc(54.68vw);
+            min-height: 800px;
+            position: relative;
+            width: 100%;
+        }
+
+        /*********************************************************/
+
+        .section-character {
+            background-color: rgb(241, 215, 206);
+        }
+
+        .section-character .box {
+            position: relative;
+            height: calc(43.59vw);
+            min-height: 490px;
+        }
+
+        .section-character .image {
+            position: absolute;
+            left: 0;
+            top: -120px;
+            z-index: 1
+        }
+
+        .section-character .message-l1 {
+            position: absolute;
+            left: calc(6vw);
+            top: calc(11vw);
+            z-index: 2
+        }
+
+        .section-character .message-l2 {
+            position: absolute;
+            left: calc(6vw);
+            bottom: calc(3.8vw);
+            z-index: 2
+        }
+
+        .section-character .message-l3 {
+            position: absolute;
+            left: calc(6vw);
+            bottom: calc(-0.4vw);
+            z-index: 2
+        }
+
+        .section-character .message-r1 {
+            position: absolute;
+            right: -40px;
+            bottom: -10px;
+            z-index: 2;
+            width: calc(250px + 10vw);
+        }
+
+        /*********************************************************/
+
+        .section-props {
+            background-color: rgb(241, 215, 206);
+            background-image: url('./includes/images/features/environment/Environment_Timeline_Background_02.png');
+            background-size: cover;
+            background-position: 50% 0%;
+            background-repeat: no-repeat;
+            height: calc(57.18vw);
+            position: relative;
+            width: 100%;
+        }
+
+        .section-props .message1 {
+            position: absolute;
+            left: 3%;
+            bottom: 0px;
+            width: 200px;
+            -webkit-transform: translateY(calc(100% - 15px));
+            transform: translateY(calc(100% - 15px));
+        }
+
+        .section-props .message2 {
+            position: absolute;
+            left: 26%;
+            width: 200px;
+            bottom: 0px;
+            -webkit-transform: translateY(calc(100% - 15px));
+            transform: translateY(calc(100% - 15px));
+        }
+
+        .section-props .message3 {
+            position: absolute;
+            left: 50%;
+            bottom: 0px;
+            width: 200px;
+            -webkit-transform: translateY(calc(100% - 15px));
+            transform: translateY(calc(100% - 15px));
+        }
+
+        .section-props .message4 {
+            position: absolute;
+            right: -60px;
+            bottom: -20px;
+            width: 230px;
+            -webkit-transform: translateY(calc(100% - 15px));
+            transform: translateY(calc(100% - 15px));
+        }
+
+        #smart-content-manager-position {
+            position: absolute; 
+            left: 68%; 
+            top: calc(4.875vw + -120.6px);
+            width: 31%;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 25px -2px rgba(20%,20%,40%,0.3);
+            color: rgb(77,77,77);
+            transition: top ease 0.3s;
+        }
+
+        #smart-content-manager-position:hover {
+            top:  calc(4.875vw + (-120.6px - 15px));
+        }
+
+        #smart-content-manager-position .title
+        {
+    color: #e8380d;
+    font-weight: 500;
+    font-size: 15px;
+        }
+
+
+        /*********************************************************/
+        @media screen and (min-width: 1921px) {
+            #smart-content-manager-position {
+                top: -50px;
+            }
+            #smart-content-manager-position:hover {
+                top: -65px;
+            }
+        }
+        @media screen and (max-width:1440px) {
+            .section-saveZone .message {
+                top: calc(4.5vw);
+                width: calc(42vw);
+            }
+
+            .section-character .box {
+                height: calc(48vw);
+            }
+
+            .section-props {
+                height: 800px;
+                background-position: 100% 0%;
+            }
+            .section-character .message-l1 {
+                top: calc(13vw);
+                left: calc(6.5vw);
+            }
+        }
+
+        @media screen and (max-width:991px) {
+            .section-path {
+                background-color: rgb(213, 213, 213);
+                background-image: url('./includes/images/media/Environment/Smoothly_Animate.jpg');
+                background-size: cover;
+                background-position: right;
+                background-repeat: no-repeat;
+                height: calc(57.18vw);
+                position: relative;
+                width: 100%;
+            }
+
+            .section-path-mobile {
+                min-height: 290px;
+            }
+            .section-path-mobile .message {
+                margin-right: 15px;
+                position: absolute;
+                left: calc(10.59535vw);
+                top: calc(6.0544vw);
+                z-index: 1;
+            }
+            /*********************************************************/
+            .section-saveZone {
+                background-color: rgb(234, 247, 218);
+                background-image: url('./includes/images/media/Environment/Prepare_Scene.jpg');
+                background-size: cover;
+                background-position: 20% 0%;
+                background-repeat: no-repeat;
+                height: calc(58.39vw);
+                position: relative;
+            }
+
+            .section-saveZone-mobile {
+                min-height: 205px;
+            }
+            .section-saveZone-mobile .message {
+                margin-right: 15px;
+                position: absolute;
+                left: calc(10.59535vw);
+                top: calc(2.01816vw);
+                z-index: 1;
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            .section-path-mobile .message {
+                position: absolute;
+                left: 30px;
+            }
+            /*********************************************************/
+            .section-saveZone-mobile .message {
+                position: absolute;
+                left: 30px;
+            }
+            /*********************************************************/
+            .section-multiTrackEditing {
+                background-position: 90% 0%;
+                min-height: 91.14583vw;
+            }
+            /*********************************************************/
+            .section-props {
+                height: 600px;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            #ytplayer {
+                width: 100%;
+            }
+            /*********************************************************/
+            .section-path-mobile {
+                min-height: 380px;
+            }
+            .section-saveZone-mobile {
+                min-height: 320px;
+            }
+        }
+    </style>
+</head>
+
+<body class="rl-style">
+    <!-- $RL-Topnav -->
+    <nav id="rl-topnavarea"></nav>
+
+    <!-- $Topnav -->
+    <nav id="topnavarea"></nav>
+
+    <!-- $Feature-Topnav -->
+    <!-- <section id="feature-topnav"></section> -->
+
+    <!-- 1 -->
+    <div class="container-fluid">
+        <div class="row rl-row-1440 rl-row-top-60">
+            <div class="col-xs-12">
+                <h1 class="text-md text-center">User Interface in Cartoon Animator</h1>
+            </div>
+            <div class="col-xs-12 col-sm-offset-1 col-sm-10 rl-row-bottom-90">
+                <ul>
+                    <li><a href="/cartoon-animator/2D-asset.html#management">Smart Content Manager</a> provides one-click installation of free designer resources and purchased assets. With powerful tag and search functions, all items can be easily found without fumbling through numerous asset folders. <i style="color: red; font-style: italian">NEW!</i> </li>
+                    <li>Convenient editing with viewport gizmos: select, transform, link, etc. and navigational tools for camera zoom, pan, and rotate.</li>
+                    <li>Two specialized editing environments: Composer Mode for character and prop setup, and Stage Mode for animation editing.</li>
+                    <li>Timeline editor for fine-grained control over keyframing and timing.</li>
+                    <li>Select between White or Dark mode for the preferred style of the UI.</li>
+                </ul>
+            </div>
+            
+            <div class="col-xs-12 rl-row-bottom-40" style="position: relative;">
+                <div class="ui-mode">
+                    <img data-src="./includes/images/features/environment/UI_light.jpg" class="img-responsive lazyload">
+                    <img data-src="./includes/images/features/environment/UI_dark.jpg" class="img-responsive lazyload">
+                </div>
+                <a href="/cartoon-animator/2D-asset.html#management">
+                    <div id="smart-content-manager-position">
+                        <div id="smart-content-manager-text-content">
+                            <p class="title">Smart Content Manager</p>
+                            <p style="font-size: 12px;">An intuitive and streamlined content experience when managing personal and purchased assets. <i style="color: red; font-style: italian">Click to Learn more.</i></p>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+        </div>       
+    </div>
+
+    <!-- 3 -->
+    <div class="container-fluid section-3dcamera">
+        <div class="row rl-row-1440 rl-row-top-60">
+            <div class="col-xs-12 col-sm-offset-1 col-sm-10">
+                <h2 class="text-sm">3D Camera System</h2>
+                <ul>
+                    <li>Use the Preview Camera to review scenes, and the Live Camera to animate camera positions with key frames.</li>
+                    <li>Customize camera views with pan, rotate, and zoom tools.</li>
+                    <li>Quickly switch between Perspective and Orthographic views for a 2D or 3D sensations.</li>
+                    <li>Navigate scenes in Perspective mode to experience realistic 3D camera movements.</li>
+                </ul>
+                <br>
+                <span class="popup-youtube">
+                    <a href="https://www.youtube.com/watch?v=1MawSfG9mXc&feature=youtu.be">
+                        <button type="button" class="rl-btn-border">Watch Demo</button>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div>
+            <img data-src="./includes/images/features/environment/Environment_3DCameraSystem.jpg" class="img-responsive lazyload" style="width: 100%">
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="section-path-mobile visible-xs visible-sm position-relative" style="height: calc(29.2633vw); background-color: rgb(190, 222, 237);;">
+        <div class="message">
+            <h3 class="text-sm">Smoothly Animate Along a Path</h3>
+            <ul>
+                <li>Create path anchors in different time frames for character and object motions.</li>
+                <li>Customize path anchors with position adjustments and speed control.</li>
+                <li>Freely control facing, and fade In/Out by using the Flip and Transparency features.</li>
+                <li>Attach and move subsidiary elements with the Link/Unlink features.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="section-path">
+        <div class="message hidden-xs hidden-sm">
+            <h3 class="text-sm">Smoothly Animate Along a Path</h3>
+            <ul>
+                <li>Create path anchors in different time frames for character and object motions.</li>
+                <li>Customize path anchors with position adjustments and speed control.</li>
+                <li>Freely control facing, and fade In/Out by using the Flip and Transparency features.</li>
+                <li>Attach and move subsidiary elements with the Link/Unlink features.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="section-saveZone-mobile visible-xs visible-sm position-relative" style="height: calc(18.668vw); background-color: rgb(235, 245, 218);">
+        <div class="message">
+            <h3 class="text-sm">Prepare your Scene with the Safe Zone</h3>
+            <ul>
+                <li>Quickly adjust your project’s output size/frame and aspect ratio before rendering and final export.</li>
+                <li>Easily manage presence, and movements of characters and props.</li>
+                <li>Current frame render button helps users instantly preview their output quality settings.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="section-saveZone">
+        <div class="message hidden-xs hidden-sm">
+            <h3 class="text-sm">Prepare your Scene with the Safe Zone</h3>
+            <ul>
+                <li>Quickly adjust your project’s output size/frame and aspect ratio before rendering and final export.</li>
+                <li>Easily manage presence, and movements of characters and props.</li>
+                <li>Current frame render button helps users instantly preview their output quality settings.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="container-fluid" style="background-color:rgb(232,206,153)">
+        <div class="row rl-row-1440">
+            <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-sm-offset-1">
+                <h2 class="text-sm">Render Style for Vector-based Content (For G2 Characters & Props Only)</h2>
+                <ul>
+                    <li>Instantly change scene styles to match different project scenarios.</li>
+                    <li>Find various color profiles and quickly change color groups to match the tone of the environment.</li>
+                    <li>Apply render style to multiple selections at once.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row rl-row-1440" style="position:relative;z-index:1">
+            <div class="col-xs-6 col-sm-offset-1 col-sm-11 rl-row-top-60">
+                <div class="col-xs-12 col-sm-4" style="padding-bottom: 20px;">
+                    <img data-src="./includes/images/features/environment/Environment_RenderStyle_01.jpg" class="img-responsive lazyload">
+                </div>
+                <div class="col-xs-12 col-sm-4" style="padding-bottom: 20px;">
+                    <img data-src="./includes/images/features/environment/Environment_RenderStyle_02.jpg" class="img-responsive lazyload">
+                </div>
+                <div class="col-xs-12 col-sm-4" style="padding-bottom: 20px;">
+                    <img data-src="./includes/images/features/environment/Environment_RenderStyle_03.jpg" class="img-responsive lazyload">
+                </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-offset-1 col-sm-11" style="padding-top:30px">
+                <div class="col-xs-12 col-sm-4" style="padding-bottom: 20px;">
+                    <img data-src="./includes/images/features/environment/Environment_RenderStyle_04.jpg" class="img-responsive lazyload">
+                </div>
+                <div class="col-xs-12 col-sm-4" style="padding-bottom: 20px;">
+                    <img data-src="./includes/images/features/environment/Environment_RenderStyle_05.jpg" class="img-responsive lazyload">
+                </div>
+                <div class="col-xs-12 col-sm-4" style="padding-bottom: 20px;">
+                    <img data-src="./includes/images/features/environment/Environment_RenderStyle_06.jpg" class="img-responsive lazyload">
+                </div>
+            </div>
+
+        </div>
+
+        <div style="position:relative;height:100px;z-index:0">
+            <img data-src="./includes/images/features/environment/Environment_RenderStyle_Background.png" class="img-responsive lazyload" style="position:absolute;bottom:0">
+        </div>
+    </div>
+
+
+    <!-- 7 -->
+    <div class="container-fluid section-multiTrackEditing">
+        <div class="row rl-row-1440 rl-row-top-60">
+            <div class="col-xs-12 col-sm-offset-2 col-sm-10 rl-row-bottom-60">
+                <h2 class="text-md">TIMELINE EDITING FOR STORYTELLING</h2>
+                <h2 class="text-sm">Multiple-track Selection and Editing</h2>
+                <ul>
+                    <li>Select an object and its subsidiary tracks for fast group editing.</li>
+                    <li>Copy & paste, Time Shift, and Time Scale adjustment over multiple element tracks.</li>
+                </ul>
+                <br>
+                <div id="ytplayer"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="container-fluid" style="background-color:rgb(239,214,205)">
+        <div class="row rl-row-1440">
+            <div class="col-xs-12 col-sm-offset-1 col-sm-11">
+                <h2 class="text-sm">Simulate Cartoon Physics with Motion Curves</h2>
+                <ul>
+                    <li>Create cartoon-style animations by applying Transition Curves to Transform Keys, and Time Warp to Motion
+                        Clips.
+                    </li>
+                    <li>Simulate real-world physics like slowing down, speeding up, free falling, bouncing, floating, or accelerating
+                        a linear motion clip.</li>
+                </ul>
+                <div class="rl-row-top-60">
+                    <img data-src="./includes/images/features/environment/Environment_MotionCurve.jpg" class="img-responsive lazyload">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color:rgb(241,215,206);position:relative;height:calc(10vw);z-index:0">
+        <img data-src="./includes/images/features/environment/Line_Leaves.png" class="img-responsive lazyload" style="position:absolute;top:0;">
+    </div>
+
+    <!-- 9 -->
+    <div class="container-fluid section-character">
+        <div class="row rl-row-1440">
+            <div class="col-xs-12 col-sm-offset-1 col-sm-7 col-sm-offset-4" style="position:relative;z-index:1">
+                <h2 class="text-sm">Animate Characters</h2>
+                <p>Animate body motions with up to 16 individual body segment tracks, with facial motion tracks that are divided
+                    into voice scripts, morphs and sprite-based categories.
+                    <br>
+                    <a href="./2d-face-animation.html" target="_self">More Facial Timeline features ></a>
+                </p>
+            </div>
+
+            <div class="col-xs-12 box hidden-xs hidden-sm">
+                <div style="position:absolute;top:-100px">
+                    <img data-src="./includes/images/features/environment/Environment_Timeline_Character.png" class="img-responsive lazyload">
+                    <div class="message-l1">
+                        <p>Loop or extend motion clips to repeat animation and control speed.</p>
+                    </div>
+                    <div class="message-l2">
+                        <p>Motion layering allows layer additions over existing motions.</p>
+                    </div>
+                    <div class="message-l3">
+                        <p>Switch body parts using sprite replacement keys.</p>
+                    </div>
+                    <div class="message-r1">
+                        <p>Align Clips -
+                            <br>helps you solve sliding issues when combining motion clips with different initial poses or positions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 rl-row-20 visible-xs visible-sm">
+                <div>
+                    <img data-src="./includes/images/media/Environment/Animate_Characters_ui.png" class="img-responsive lazyload">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="container-fluid section-props">
+        <div class="row rl-row-1440 rl-row-top-60">
+            <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-sm-offset-1 rl-row-top-60">
+                <h2 class="text-sm">Animate Props</h2>
+                <p>Key frame editing for opacity, transform, visibility, link, path animation, deformation, sprite switching,
+                    and flipping with blending effects.</p>
+            </div>
+            <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-sm-offset-1 rl-row-top-60 hidden-xs hidden-sm" style="position:relative">
+                <img data-src="./includes/images/features/environment/Environment_Timeline_Props.png" class="img-responsive lazyload">
+                <div class="message1">
+                    <p>
+                        <b>Motion Layering</b>
+                    </p>
+                    <p>
+                        <ul>
+                            <li>Transformation</li>
+                            <li>Sprite Switch</li>
+                            <li>Deformation</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="message2">
+                    <p>Elastic Motion clips for Entry/Exit/Emphasis effects.</p>
+                </div>
+                <div class="message3">
+                    <p>FFD Motion clips for free form deformation.</p>
+                </div>
+                <div class="message4">
+                    <p>Add motion clips to the quick perform list, to later reuse from the right-click Action menu. </p>
+                </div>
+            </div>
+            <div class="col-xs-12 rl-row-20 visible-xs visible-sm">
+                <div>
+                    <img data-src="./includes/images/media/Environment/Animate_Props_ui.png" class="img-responsive lazyload">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="rl-rel">
+        <div class="page-next">
+            <a href="./2D-character-creation.html" target="_self">
+                <img class="arrow-img lazyload" data-src="./includes/images/backtotop.svg" alt="">
+                <div class="desc">
+                    <p>Create Characters</p>
+                </div>
+            </a>
+        </div>
+        <div class="page-prev">
+            <a href="./2D-animation-feature.html" target="_self">
+                <img class="arrow-img lazyload" data-src="./includes/images/backtotop.svg" alt="">
+                <div class="desc">
+                    <p>Features</p>
+                </div>
+            </a>
+        </div>
+    </div> -->
+
+    <!-- Footer -->
+    <footer id="footerarea"></footer>
+</body>
+
+<script>
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    var playerState;
+    var reset = 1;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('ytplayer', {
+            videoId: 'rgn9mMuSDkc',
+            playerVars: { 'controls': 0, 'showinfo': 0 },
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
+
+    $(window).scroll(function () {
+        var _videoTop = $("#ytplayer").offset().top - $(window).height() + 100;
+        var _videoBottom = $("#ytplayer").offset().top + $("#ytplayer").height() - 100;
+        if (($(window).scrollTop() > _videoTop) && ($(window).scrollTop() < _videoBottom)) {
+            if ((playerState !== YT.PlayerState.PLAYING) && (reset === 1)) {
+                player.playVideo();
+                reset = 0;
+            }
+        }
+        else {
+            if (reset === 0) {
+                player.pauseVideo();
+                reset = 1;
+            }
+        }
+    });
+
+    function onPlayerReady(event) {
+    }
+
+    function onPlayerStateChange(event) {
+        playerState = event.data;
+    }
+
+    $(document).ready(function () {
+        $(".ui-mode").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            infinite: true,
+            speed: 600,
+            autoplaySpeed: 4000,
+            autoplay: false,
+            pauseOnHover: false,
+        });
+    });
+</script>
+
+</html>
